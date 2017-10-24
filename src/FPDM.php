@@ -28,12 +28,12 @@ class FPDM
         "/Type" => "/\/Type\s+\/(\w+)$/",
         "/Subtype" => "/^\/Subtype\s+\/(\w+)$/"
     );
-    
+
     protected $pdf_source;      //string: full pathname to the input pdf , a form file
     protected $fdf_source;      //string: full pathname to the input fdf , a form data file
     protected $pdf_output;      //string: full pathname to the resulting filled pdf
 
-    protected $pdf_entries;     //array: Holds the content of the pdf file as array
+    public $pdf_entries;     //array: Holds the content of the pdf file as array
     protected $fdf_content;     //string: holds the content of the fdf file
     protected $fdf_parse_needed;//boolean: false will use $fields data else extract data from fdf content
     protected $value_entries;   //array: a map of values to faliclitate access and changes
